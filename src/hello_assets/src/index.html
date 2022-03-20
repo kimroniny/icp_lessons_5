@@ -6,17 +6,42 @@
     <title>hello</title>
     <base href="/" />
     <link rel="icon" href="favicon.ico" />
-    <link type="text/css" rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
   </head>
   <body>
+    <header><h1>Microblob</h1></header>
     <main>
-      <img src="logo.png" alt="DFINITY logo" />
-      <form action="#">
-        <label for="name">Enter your name: &nbsp;</label>
-        <input id="name" alt="Name" type="text" />
-        <button type="submit">Click Me!</button>
-      </form>
-      <section id="greeting"></section>
+      <label for="message">What do you want to post?</label>
+      <textarea id="message"></textarea>
+      <div>
+        <label for="opt">OPT:</label>
+        <br>
+        <input id="opt"></input>
+        <br>
+        <button id="post">POST</button>&nbsp;<span id="error"></span>
+      </div>
+      <div>
+        <label for="set">Set Author Name:</label>
+        <br>
+        <input id="set"></input>
+        <br>
+        <button id="btn_set">SET</button>&nbsp;<span id="set_error"></span>
+      </div>
+      <div>
+        <label for="follow">Canister:</label>
+        <br>
+        <input id="follow"></input>
+        <br>
+        <button id="btn_follow">Follow</button>&nbsp;<span id="follow_error"></span>
+      </div>
+      <div>
+        Authors List:
+        <ul id="author_list" style="padding-left: 0;"></ul>
+      </div>
+      <div>
+        Posts:
+        <section id="posts"></section>
+      </div>
     </main>
   </body>
 </html>
